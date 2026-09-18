@@ -9,7 +9,7 @@ const ConsultationSection: React.FC = () => {
   };
 
   return (
-    <section className="py-8 sm:py-16 bg-[#FFFDF9] relative overflow-hidden">
+    <section id="contact" className="py-8 sm:py-16 bg-[#FFFDF9] relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0">
         {/* Green gradient background */}

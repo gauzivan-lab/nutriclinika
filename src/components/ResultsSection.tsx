@@ -1,10 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import CTAButton from './CTAButton';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
 
 const results = [
   { image: 'https://cdn.accelonline.io/5xS9ywHMUUmfhuqWy0a_Mg/images/MMHab3qIwUy0kdGT71I-DQ.jpg' },
@@ -29,20 +28,11 @@ const ResultsSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] overflow-hidden">
+    <section id="reviews" className="relative py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary-100/30 rounded-full blur-[60px] -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-accent-100/20 rounded-full blur-[60px] translate-x-1/2 translate-y-1/2" />
-      </div>
-
-      {/* Bottom right decorative image */}
-      <div className="absolute bottom-0 right-0 w-[200px] sm:w-[300px] h-[200px] sm:h-[300px]">
-        <img
-          src="https://cdn.accelonline.io/5xS9ywHMUUmfhuqWy0a_Mg/images/tylLOuKik0eFC7jjKgN1hg.png"
-          alt="Декоративное изображение"
-          className="w-full h-full object-contain"
-        />
       </div>
 
       <div className="container mx-auto px-4 relative">
@@ -55,30 +45,36 @@ const ResultsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Results Carousel */}
-        <div className="max-w-xl mx-auto mb-10">
+        {/* Results Carousel: multi-column on desktop, single column on mobile */}
+        <div className="mb-10 results-carousel">
           <Swiper
-            modules={[Navigation, Autoplay, EffectFade]}
-            effect="fade"
-            speed={1000}
-            slidesPerView={1}
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1.15}
             navigation
             loop={true}
             autoplay={{
-              delay: 5000,
+              delay: 4000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true
             }}
-            className="w-full aspect-[3/4] rounded-xl overflow-hidden shadow-xl"
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
+              1280: { slidesPerView: 4, spaceBetween: 24 }
+            }}
+            className="w-full pb-2"
           >
             {results.map((result, index) => (
-              <SwiperSlide key={index} className="bg-gray-100">
-                <img
-                  src={result.image}
-                  alt={`История успеха ${index + 1}`}
-                  className="w-full h-full object-contain"
-                  loading="lazy"
-                />
+              <SwiperSlide key={index}>
+                <div className="rounded-xl overflow-hidden shadow-md border border-gray-100 bg-white aspect-[4/5]">
+                  <img
+                    src={result.image}
+                    alt={`История успеха ${index + 1}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

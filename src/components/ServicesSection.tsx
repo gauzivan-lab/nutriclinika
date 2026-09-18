@@ -116,7 +116,7 @@ const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#F9F6F1] to-white relative overflow-hidden">
+    <section id="services" className="py-16 bg-gradient-to-b from-[#F9F6F1] to-white relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-100/40 via-transparent to-primary-100/40" />
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-primary-100/30 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-pulse" />

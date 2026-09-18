@@ -73,10 +73,8 @@ const Navigation: React.FC = () => {
               Цены
             </button>
             <a href="#doctors" className="text-gray-700 hover:text-primary-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 hover:after:w-full after:transition-all">Врачи</a>
-            <a href="#blog" className="text-gray-700 hover:text-primary-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 hover:after:w-full after:transition-all">Блог</a>
             <a href="#reviews" className="text-gray-700 hover:text-primary-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 hover:after:w-full after:transition-all">Отзывы</a>
             <a href="#contact" className="text-gray-700 hover:text-primary-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 hover:after:w-full after:transition-all">Контакты</a>
-            <a href="#promotions" className="text-gray-700 hover:text-primary-500 transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 hover:after:w-full after:transition-all">Акции</a>
           </div>
 
           {/* Mobile menu */}
@@ -127,33 +125,19 @@ const Navigation: React.FC = () => {
                 >
                   Врачи
                 </a>
-                <a 
-                  href="#blog" 
-                  className="text-xl text-gray-700 hover:text-primary-500 transition-colors border-b border-gray-100 pb-4" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Блог
-                </a>
-                <a 
-                  href="#reviews" 
-                  className="text-xl text-gray-700 hover:text-primary-500 transition-colors border-b border-gray-100 pb-4" 
+                <a
+                  href="#reviews"
+                  className="text-xl text-gray-700 hover:text-primary-500 transition-colors border-b border-gray-100 pb-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Отзывы
                 </a>
-                <a 
-                  href="#contact" 
-                  className="text-xl text-gray-700 hover:text-primary-500 transition-colors border-b border-gray-100 pb-4" 
+                <a
+                  href="#contact"
+                  className="text-xl text-gray-700 hover:text-primary-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Контакты
-                </a>
-                <a 
-                  href="#promotions" 
-                  className="text-xl text-gray-700 hover:text-primary-500 transition-colors" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Акции
                 </a>
               </div>
             </div>

@@ -130,7 +130,7 @@ const ExpertsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] relative overflow-hidden">
+    <section id="doctors" className="py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-50/40 via-transparent to-primary-50/40 animate-gradient" />
