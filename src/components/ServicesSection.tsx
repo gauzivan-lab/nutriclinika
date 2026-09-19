@@ -132,10 +132,10 @@ const ServicesSection: React.FC = () => {
           </h2>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
             От разбора анализов до сопровождения на 3 месяца.
-            Вы можете начать с одного шага — а мы поможем выстроить путь.
+            Вы можете начать с одного шага, а мы поможем выстроить путь.
           </p>
           <p className="text-sm text-gray-600 border-t border-b border-gray-200 py-3 px-4 inline-block">
-            Затрудняетесь в выборе? Напишите нам на WhatsApp — поможем определиться.
+            Затрудняетесь в выборе? Напишите нам на WhatsApp, поможем определиться.
           </p>
         </div>
 
@@ -294,7 +294,7 @@ const ServicesSection: React.FC = () => {
 
         <div className="max-w-2xl mx-auto text-center animate-fade-in-up">
           <p className="text-base text-gray-700 mb-2">
-            Все форматы — онлайн и офлайн (г. Самара).
+            Все форматы: онлайн и офлайн (г. Самара).
           </p>
           <p className="text-base text-accent-600 font-medium">
             Мы поможем выбрать оптимальный вариант под ваш запрос и бюджет.

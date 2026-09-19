@@ -32,12 +32,12 @@ const TeamSection: React.FC = () => {
         <div className="max-w-3xl backdrop-blur-[2px] p-4 sm:p-8 rounded-2xl bg-black/10">
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-8 leading-tight tracking-tight drop-shadow-lg">
             <span className="block mb-2">Добро пожаловать в Нутриклинику</span>
-            <span className="block text-[0.9em] text-primary-100">— центр восстановления здоровья,</span>
+            <span className="block text-[0.9em] text-primary-100">центр восстановления здоровья,</span>
             <span className="block text-[0.9em] bg-gradient-to-r from-white to-primary-100 bg-clip-text text-transparent">где вас видят целиком</span>
           </h2>
           
           <p className="text-base sm:text-xl md:text-2xl text-white mb-6 sm:mb-12 leading-relaxed tracking-wide drop-shadow-lg font-medium">
-            Мы команда специалистов, объединённых одной целью — помочь вам понять, что происходит с телом, и пройти путь восстановления с заботой и профессионализмом.
+            Мы команда специалистов, объединённых одной целью: помочь вам понять, что происходит с телом, и пройти путь восстановления с заботой и профессионализмом.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">

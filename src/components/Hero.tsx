@@ -22,12 +22,12 @@ const Hero: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-16">
             <div className="max-w-3xl">
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary-500 mb-6 sm:mb-12 leading-tight tracking-tight">
-                Вы чувствуете, что с телом что-то не так — не знаете, с чего начать или не можете найти причину?
+                Вы чувствуете, что с телом что-то не так, но не знаете, с чего начать, или не можете найти причину?
               </h1>
               
               <div className="mb-6 sm:mb-10 text-gray-800 text-sm sm:text-base md:text-lg space-y-4 sm:space-y-6">
                 <p className="leading-relaxed max-w-2xl tracking-wide font-semibold text-base sm:text-lg md:text-xl">
-                  Лишний вес, усталость, скачки настроения, ЖКТ или гормоны — сигналы есть, а{' '}
+                  Лишний вес, усталость, скачки настроения, ЖКТ или гормоны: сигналы есть, а{' '}
                   <em className="font-extrabold not-italic text-primary-700">
                     ясности нет
                   </em>
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
                     «Помогите найти причину»
                   </span>
                   <span className="block mt-1 text-gray-600 text-sm sm:text-base">
-                    — именно с этими словами к нам приходят чаще всего.
+                    Именно с этими словами к нам приходят чаще всего.
                   </span>
                 </div>
               </div>
