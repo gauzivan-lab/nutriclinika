@@ -5,14 +5,14 @@ const TeamSection: React.FC = () => {
   const handleLearnMore = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
+      window.location.hash = 'services';
     }
   };
 
   const handleConsultation = () => {
     const contactForm = document.getElementById('contact');
     if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
+      window.location.hash = 'contact';
     }
   };
 

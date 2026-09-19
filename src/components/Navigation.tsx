@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      window.location.hash = id;
       setIsMenuOpen(false);
     }
   };

@@ -111,7 +111,7 @@ const ServicesSection: React.FC = () => {
   const handleConsultation = () => {
     const contactForm = document.getElementById('contact');
     if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
+      window.location.hash = 'contact';
     }
   };
 
