@@ -5,7 +5,7 @@ import { openWhatsApp } from '../utils/whatsapp';
 
 // Base card component with common styling
 const BaseExpertCard = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 ease-out hover:-translate-y-2 group h-[800px] flex flex-col">
+  <div className="bg-white rounded-2xl overflow-hidden border border-stone-200 transition-all duration-300 hover:border-primary-200 hover:shadow-[0_12px_32px_-8px_rgba(41,112,42,0.14)] group h-[800px] flex flex-col">
     {children}
   </div>
 );
@@ -128,36 +128,16 @@ const ExpertsSection: React.FC = () => {
   };
 
   return (
-    <section id="doctors" className="py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] relative overflow-hidden scroll-mt-[120px] sm:scroll-mt-[140px]">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50/40 via-transparent to-primary-50/40 animate-gradient" />
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-primary-100/30 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent-100/30 rounded-full blur-[80px] translate-x-1/2 translate-y-1/2 animate-pulse" />
-      </div>
-
-      {/* Top right decorative image */}
-      <div className="absolute top-0 right-0 w-[100px] sm:w-[150px] h-[100px] sm:h-[150px] z-10">
-        <img
-          src="https://cdn.accelonline.io/5xS9ywHMUUmfhuqWy0a_Mg/images/WD6XQ7i1v0-Qrec0bgF8UA.png"
-          alt="Декоративное изображение"
-          className="w-full h-full object-contain transform rotate-180"
-        />
-      </div>
-
-      {/* Bottom left decorative image */}
-      <div className="absolute bottom-0 left-0 w-[100px] sm:w-[150px] md:w-[200px] h-[100px] sm:h-[150px] md:h-[200px] z-10">
-        <img
-          src="https://cdn.accelonline.io/5xS9ywHMUUmfhuqWy0a_Mg/images/J372gKMFhEO_o5F7tgWL2Q.png"
-          alt="Декоративное изображение"
-          className="w-full h-full object-contain"
-        />
-      </div>
+    <section id="doctors" className="py-16 bg-[#F9F6F1] relative overflow-hidden scroll-mt-[120px] sm:scroll-mt-[140px]">
+      <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-accent-100/20 rounded-full blur-[90px] -translate-x-1/3 translate-y-1/3" />
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 bg-clip-text text-transparent">
-            Наши эксперты — врачи, нутрициологи и специалисты, которые видят картину целиком и работают в связке
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 mb-3 inline-block">
+            Команда клиники
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight text-gray-900">
+            Врачи, нутрициологи и специалисты, которые видят картину целиком
           </h2>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             В Нутриклинике работают не просто «разные специалисты». Мы — команда, где нутрициология, медицина, образ жизни и ментальное здоровье соединяются, чтобы вы получили результат.

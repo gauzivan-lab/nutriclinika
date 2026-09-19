@@ -25,44 +25,41 @@ const Hero: React.FC = () => {
                 Вы чувствуете, что с телом что-то не так — не знаете, с чего начать или не можете найти причину?
               </h1>
               
-              <div className="mb-6 sm:mb-12 text-gray-800 text-sm sm:text-base md:text-lg space-y-4 sm:space-y-8">
+              <div className="mb-6 sm:mb-10 text-gray-800 text-sm sm:text-base md:text-lg space-y-4 sm:space-y-6">
                 <p className="leading-relaxed max-w-2xl tracking-wide font-semibold text-base sm:text-lg md:text-xl">
                   Лишний вес, усталость, скачки настроения, ЖКТ или гормоны — сигналы есть, а{' '}
-                  <em className="font-extrabold italic text-gray-900 bg-primary-50/70 px-2 py-0.5 rounded-md">
+                  <em className="font-extrabold not-italic text-primary-700">
                     ясности нет
                   </em>
                 </p>
-                
-                <div className="max-w-2xl bg-gradient-to-br from-accent-500/10 via-accent-500/5 to-transparent p-3 sm:p-6 rounded-2xl backdrop-blur-sm border border-accent-500/20">
-                  <span className="inline-block text-accent-500 font-extrabold bg-accent-50/50 px-3 sm:px-5 py-1.5 rounded-full text-base sm:text-xl">
-                    "Помогите найти причину"
+
+                <div className="max-w-2xl border-l-4 border-accent-500 pl-4 sm:pl-6 py-1">
+                  <span className="block text-accent-600 font-bold text-base sm:text-xl">
+                    «Помогите найти причину»
                   </span>
-                  <span className="block mt-2 text-gray-700 font-semibold tracking-wide text-sm sm:text-lg">
+                  <span className="block mt-1 text-gray-600 text-sm sm:text-base">
                     — именно с этими словами к нам приходят чаще всего.
                   </span>
                 </div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 mb-4 sm:mb-8">
-                <CTAButton 
-                  text="Хочу понять, что со мной" 
-                  primary={true} 
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 mb-6 sm:mb-10">
+                <CTAButton
+                  text="Хочу понять, что со мной"
+                  primary={true}
                   onClick={handleLearnMore}
                   className="text-sm sm:text-base"
                 />
-                <CTAButton 
-                  text="Записаться на консультацию" 
+                <CTAButton
+                  text="Записаться на консультацию"
                   onClick={handleConsultation}
                   className="text-sm sm:text-base"
                 />
               </div>
 
-              <p className="leading-relaxed max-w-2xl text-gray-800 text-sm sm:text-lg md:text-xl tracking-wide mt-4 mb-8 bg-white/30 p-3 sm:p-6 rounded-2xl backdrop-blur-sm border border-primary-100/20 font-semibold">
+              <p className="leading-relaxed max-w-2xl text-gray-700 text-sm sm:text-base tracking-wide">
                 Мы соединяем нутрициологию, медицину и образ жизни, чтобы выявить первопричины и выстроить стратегию{' '}
-                <em className="font-extrabold italic text-accent-500 relative inline-block">
-                  восстановления
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent-500/30"></span>
-                </em>
+                <span className="font-semibold text-accent-600">восстановления</span>.
               </p>
             </div>
 
