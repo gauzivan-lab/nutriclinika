@@ -15,7 +15,7 @@ const TeamSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-[100vh] sm:min-h-[130vh] flex items-end">
+    <section className="relative min-h-[90vh] sm:min-h-screen flex items-end">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img
