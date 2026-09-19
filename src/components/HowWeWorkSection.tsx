@@ -83,31 +83,43 @@ const HowWeWorkSection: React.FC = () => {
         </div>
 
         {/* Steps */}
-        <div className="relative max-w-2xl mx-auto">
-          <div className="absolute left-6 top-2 bottom-2 w-px bg-stone-200" />
+        <div className="relative max-w-4xl mx-auto">
+          <div className="absolute left-6 sm:left-1/2 top-1 bottom-1 w-px bg-gradient-to-b from-transparent via-stone-300 to-transparent" />
 
-          <div className="space-y-2">
+          <div className="space-y-10 sm:space-y-6">
             {steps.map((step, index) => {
               const Icon = step.icon;
+              const isEven = index % 2 === 0;
 
-              return (
-                <div key={step.id} className="relative flex gap-6 group reveal">
-                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-primary-500 flex items-center justify-center">
-                    <span className="text-base font-bold text-primary-600">{step.id}</span>
-                  </div>
-
-                  <div className="flex-1 pb-10 pt-1.5">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-lg font-bold text-gray-900">
-                        {step.title}
-                      </h3>
+              const card = (
+                <div className="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 transition-all duration-300 hover:border-primary-200 hover:shadow-[0_12px_32px_-8px_rgba(41,112,42,0.16)] hover:-translate-y-1">
+                  <div className="flex items-center gap-3 mb-2.5">
+                    <div className="w-11 h-11 rounded-xl bg-primary-50 flex items-center justify-center flex-shrink-0">
                       {step.icon ? (
-                        <Icon size={20} strokeWidth={2} className="text-accent-500 flex-shrink-0" />
+                        <Icon size={22} strokeWidth={2} className="text-primary-600" />
                       ) : (
-                        <img src={step.imageUrl} alt="" className="w-6 h-6 object-contain flex-shrink-0" />
+                        <img src={step.imageUrl} alt="" className="w-6 h-6 object-contain" />
                       )}
                     </div>
-                    <p className="text-gray-600 leading-relaxed text-sm max-w-lg">{step.description}</p>
+                    <h3 className="text-lg font-bold text-gray-900">{step.title}</h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
+                </div>
+              );
+
+              return (
+                <div key={step.id} className="relative sm:grid sm:grid-cols-2 sm:gap-x-12">
+                  <div className="absolute left-6 sm:left-1/2 top-1 -translate-x-1/2 z-10 w-10 h-10 rounded-full bg-white border-2 border-primary-500 flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
+                    <span className="text-sm font-bold text-primary-600">{step.id}</span>
+                  </div>
+
+                  <div className="hidden sm:block" />
+
+                  <div
+                    className={`pl-16 sm:pl-0 ${isEven ? 'sm:col-start-1 sm:row-start-1 sm:pr-12 reveal-left' : 'sm:col-start-2 sm:row-start-1 sm:pl-12 reveal-right'}`}
+                    style={{ transitionDelay: `${index * 120}ms` }}
+                  >
+                    {card}
                   </div>
                 </div>
               );
