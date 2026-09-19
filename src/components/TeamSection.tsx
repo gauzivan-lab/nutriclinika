@@ -21,7 +21,7 @@ const TeamSection: React.FC = () => {
         <img
           src="https://cdn.accelonline.io/5xS9ywHMUUmfhuqWy0a_Mg/images/9WIyUFGtTU-zt-c3Nfc9zg.jpg"
           alt="Команда Нутриклиники"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/40 via-primary-900/30 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
