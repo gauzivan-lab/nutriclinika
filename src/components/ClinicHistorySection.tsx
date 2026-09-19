@@ -2,7 +2,7 @@ import React from 'react';
 
 const ClinicHistorySection: React.FC = () => {
   return (
-    <section id="about" className="py-16 bg-[#FFFDF9] relative overflow-hidden">
+    <section id="about" className="py-16 bg-[#FFFDF9] relative overflow-hidden scroll-mt-[120px] sm:scroll-mt-[140px]">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-500/5 animate-gradient" />

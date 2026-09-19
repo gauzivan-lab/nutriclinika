@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="font-sans bg-[#F9F6F1] pt-[120px] sm:pt-[140px]">
+    <div className="font-sans bg-[#F9F6F1]">
       <Navigation />
       <TeamSection />
       <Hero />

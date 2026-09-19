@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, Clock, Users, Star, Sparkles, Gift, ChevronDown } from 'lucide-react';
 import CTAButton from './CTAButton';
+import { openWhatsApp } from '../utils/whatsapp';
 
 // Base card component with common styling
 const BaseExpertCard = ({ children }: { children: React.ReactNode }) => (
@@ -123,14 +124,11 @@ const Anastasia3Card = () => (
 
 const ExpertsSection: React.FC = () => {
   const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+    openWhatsApp('Здравствуйте! Хочу записаться на бесплатную консультацию.');
   };
 
   return (
-    <section id="doctors" className="py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] relative overflow-hidden">
+    <section id="doctors" className="py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] relative overflow-hidden scroll-mt-[120px] sm:scroll-mt-[140px]">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-50/40 via-transparent to-primary-50/40 animate-gradient" />

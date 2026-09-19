@@ -6,6 +6,7 @@ const services = [
   {
     title: 'Разбор анализов',
     price: '990 ₽',
+    orderUrl: 'https://нутриклиника.online/razbor',
     description: 'Поймите, что происходит с вашим телом',
     mainBenefit: 'Получите ясность и план действий за 20 минут',
     features: [
@@ -20,6 +21,7 @@ const services = [
   {
     title: 'Экспресс-консультация',
     price: '2 900 ₽',
+    orderUrl: 'https://нутриклиника.online/expres',
     description: 'Быстрая поддержка в процессе',
     mainBenefit: 'Корректировка курса за 30 минут',
     features: [
@@ -34,6 +36,7 @@ const services = [
   {
     title: 'Консультация нутрициолога',
     price: '5 000 ₽',
+    orderUrl: 'https://нутриклиника.online/consultation',
     description: 'Глубокий разбор состояния',
     mainBenefit: 'Комплексный анализ и персональные рекомендации',
     features: [
@@ -49,6 +52,7 @@ const services = [
     title: 'Базовый пакет',
     subtitle: '3 консультации с рекомендациями',
     price: '15 000 ₽',
+    orderUrl: 'https://нутриклиника.online/bazovii',
     description: 'Комплексный подход к здоровью',
     mainBenefit: 'Полное понимание и поэтапный план восстановления',
     features: [
@@ -64,6 +68,7 @@ const services = [
     title: 'Сопровождение на 1 месяц',
     subtitle: 'от команды клиники',
     price: '30 000 ₽',
+    orderUrl: 'https://нутриклиника.online/teamcouch',
     description: 'Полная поддержка на пути к здоровью',
     mainBenefit: 'Ежедневная забота и контроль результатов',
     features: [
@@ -80,6 +85,7 @@ const services = [
     title: 'VIP-программа',
     subtitle: 'от Алены Щербаковой на 3 месяца',
     price: '98 000 ₽',
+    orderUrl: 'https://нутриклиника.online/vip',
     description: 'Премиальное сопровождение',
     mainBenefit: 'Персональное внимание основателя клиники',
     image: 'https://cdn.accelonline.io/5xS9ywHMUUmfhuqWy0a_Mg/images/0aeN3wjdt0KZwxKQC7Xx-A.png',
@@ -108,15 +114,12 @@ const services = [
 const ServicesSection: React.FC = () => {
   const [isVipDetailsOpen, setIsVipDetailsOpen] = useState(false);
 
-  const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+  const handleOrder = (orderUrl: string) => {
+    window.open(orderUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <section id="services" className="py-16 bg-gradient-to-b from-[#F9F6F1] to-white relative overflow-hidden">
+    <section id="services" className="py-16 bg-gradient-to-b from-[#F9F6F1] to-white relative overflow-hidden scroll-mt-[120px] sm:scroll-mt-[140px]">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-100/40 via-transparent to-primary-100/40" />
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-primary-100/30 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-pulse" />
@@ -233,7 +236,7 @@ const ServicesSection: React.FC = () => {
 
                       <CTAButton
                         text="Оставить заявку"
-                        onClick={handleConsultation}
+                        onClick={() => handleOrder(service.orderUrl)}
                         primary={true}
                         className="w-full mt-6 bg-[#29702A] hover:bg-[#225621] group-hover:shadow-lg transition-shadow"
                       />
@@ -283,7 +286,7 @@ const ServicesSection: React.FC = () => {
 
                     <CTAButton
                       text="Записаться"
-                      onClick={handleConsultation}
+                      onClick={() => handleOrder(service.orderUrl)}
                       primary={service.primary}
                       className={`
                         w-full text-sm mt-auto transition-all

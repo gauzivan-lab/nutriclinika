@@ -1,15 +1,13 @@
 import React from 'react';
+import { openWhatsApp } from '../utils/whatsapp';
 
 const ConsultationSection: React.FC = () => {
   const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+    openWhatsApp('Здравствуйте! Хочу записаться на бесплатную консультацию.');
   };
 
   return (
-    <section id="contact" className="py-8 sm:py-16 bg-[#FFFDF9] relative overflow-hidden">
+    <section id="contact" className="py-8 sm:py-16 bg-[#FFFDF9] relative overflow-hidden scroll-mt-[120px] sm:scroll-mt-[140px]">
       {/* Decorative background elements */}
       <div className="absolute inset-0">
         {/* Green gradient background */}

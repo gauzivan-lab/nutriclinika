@@ -1,5 +1,6 @@
 import React from 'react';
 import CTAButton from './CTAButton';
+import { openWhatsApp } from '../utils/whatsapp';
 
 const TeamSection: React.FC = () => {
   const handleLearnMore = () => {
@@ -10,10 +11,7 @@ const TeamSection: React.FC = () => {
   };
 
   const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+    openWhatsApp('Здравствуйте! Хочу записаться на бесплатную консультацию.');
   };
 
   return (

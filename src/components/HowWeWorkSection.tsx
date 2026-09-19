@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Search, ListTodo, MessageSquareMore, Target, ArrowRight } from 'lucide-react';
 import CTAButton from './CTAButton';
+import { openWhatsApp } from '../utils/whatsapp';
 
 const steps = [
   {
@@ -38,10 +39,7 @@ const steps = [
 
 const HowWeWorkSection: React.FC = () => {
   const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+    openWhatsApp('Здравствуйте! Хочу записаться на бесплатную консультацию.');
   };
 
   useEffect(() => {

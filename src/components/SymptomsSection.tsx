@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCards } from 'swiper/modules';
 import { Zap, Scale, FlaskConical, Stethoscope, TestTube } from 'lucide-react';
 import CTAButton from './CTAButton';
+import { openWhatsApp } from '../utils/whatsapp';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -82,10 +83,7 @@ const symptoms: Symptom[] = [
 
 const SymptomsSection: React.FC = () => {
   const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+    openWhatsApp('Здравствуйте! Хочу записаться на бесплатную консультацию.');
   };
 
   return (

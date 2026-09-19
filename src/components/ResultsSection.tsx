@@ -2,6 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import CTAButton from './CTAButton';
+import { openWhatsApp } from '../utils/whatsapp';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -21,14 +22,11 @@ const results = [
 
 const ResultsSection: React.FC = () => {
   const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+    openWhatsApp('Здравствуйте! Хочу записаться на бесплатную консультацию.');
   };
 
   return (
-    <section id="reviews" className="relative py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] overflow-hidden">
+    <section id="reviews" className="relative py-16 bg-gradient-to-b from-[#FFFDF9] to-[#F9F6F1] overflow-hidden scroll-mt-[120px] sm:scroll-mt-[140px]">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary-100/30 rounded-full blur-[60px] -translate-x-1/2 -translate-y-1/2" />
@@ -67,11 +65,11 @@ const ResultsSection: React.FC = () => {
           >
             {results.map((result, index) => (
               <SwiperSlide key={index}>
-                <div className="rounded-xl overflow-hidden shadow-md border border-gray-100 bg-white aspect-[4/5]">
+                <div className="rounded-xl overflow-hidden shadow-md border border-gray-100 bg-gray-50 h-[420px] flex items-center justify-center">
                   <img
                     src={result.image}
                     alt={`История успеха ${index + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     loading="lazy"
                   />
                 </div>

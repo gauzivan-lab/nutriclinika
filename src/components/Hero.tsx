@@ -1,6 +1,7 @@
 import React from 'react';
 import CTAButton from './CTAButton';
 import SymptomsSlider from './SymptomsSlider';
+import { openWhatsApp } from '../utils/whatsapp';
 
 const Hero: React.FC = () => {
   const handleLearnMore = () => {
@@ -11,10 +12,7 @@ const Hero: React.FC = () => {
   };
 
   const handleConsultation = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      window.location.hash = 'contact';
-    }
+    openWhatsApp('Здравствуйте! Хочу записаться на бесплатную консультацию.');
   };
 
   return (
