@@ -64,11 +64,11 @@ const HowWeWorkSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-16 bg-[#FFFDF9] overflow-hidden">
+    <section className="relative py-12 bg-[#FFFDF9] overflow-hidden">
       <div className="absolute top-0 right-0 w-[380px] h-[380px] bg-secondary-100/25 rounded-full blur-[90px] translate-x-1/3 -translate-y-1/3" />
 
       <div className="container mx-auto px-4 relative">
-        <div className="max-w-3xl mx-auto text-center mb-16 reveal-scale">
+        <div className="max-w-3xl mx-auto text-center mb-10 reveal-scale">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-600 mb-3 inline-block">
             Как мы работаем
           </span>
@@ -86,22 +86,22 @@ const HowWeWorkSection: React.FC = () => {
         <div className="relative max-w-4xl mx-auto">
           <div className="absolute left-6 sm:left-1/2 top-1 bottom-1 w-px bg-gradient-to-b from-transparent via-stone-300 to-transparent" />
 
-          <div className="space-y-10 sm:space-y-6">
+          <div className="space-y-5 sm:space-y-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
               const isEven = index % 2 === 0;
 
               const card = (
-                <div className="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 transition-all duration-300 hover:border-primary-200 hover:shadow-[0_12px_32px_-8px_rgba(41,112,42,0.16)] hover:-translate-y-1">
-                  <div className="flex items-center gap-3 mb-2.5">
-                    <div className="w-11 h-11 rounded-xl bg-primary-50 flex items-center justify-center flex-shrink-0">
+                <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 transition-all duration-300 hover:border-primary-200 hover:shadow-[0_12px_32px_-8px_rgba(41,112,42,0.16)] hover:-translate-y-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center flex-shrink-0">
                       {step.icon ? (
-                        <Icon size={22} strokeWidth={2} className="text-primary-600" />
+                        <Icon size={20} strokeWidth={2} className="text-primary-600" />
                       ) : (
-                        <img src={step.imageUrl} alt="" className="w-6 h-6 object-contain" />
+                        <img src={step.imageUrl} alt="" className="w-5 h-5 object-contain" />
                       )}
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900">{step.title}</h3>
+                    <h3 className="text-base font-bold text-gray-900">{step.title}</h3>
                   </div>
                   <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
                 </div>
